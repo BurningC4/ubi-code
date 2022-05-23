@@ -24,11 +24,11 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            burningc4/uci-code
+            burningc4/ubi-code
           tags: |
             type=sha
             type=raw,latest
-            type=schedule,pattern={{date 'YYYY-WW'}}
+            type=schedule,pattern={{date 'YYYYWW'}}
 
       - name: Login to DockerHub
         uses: docker/login-action@v2
