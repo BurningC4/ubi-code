@@ -17,10 +17,12 @@ RUN rm -rf /install-code-el8.sh
 ADD /scripts/start-code.sh /
 ADD /scripts/start-code.pl /
 
+RUN chmod 755 start-code*
+
 EXPOSE 9980
 
 # switch to cool user (use numeric user id to be compatible with Kubernetes Pod Security Policies)
 USER 998
 
 # Entry point
-CMD ["bash /start-code.sh"]
+CMD ["/start-code.sh"]
