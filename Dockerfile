@@ -23,4 +23,4 @@ EXPOSE 9980
 USER 998
 
 # Entry point
-CMD ["/start-code.sh"]
+CMD ["bash /start-code.sh"]
