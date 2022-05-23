@@ -1,0 +1,4 @@
+[CODE-el8]
+name=CODE-el8
+baseurl=https://collaboraoffice.com/repos/CollaboraOnline/CODE-centos8
+enabled=1
