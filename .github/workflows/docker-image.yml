@@ -26,7 +26,7 @@ jobs:
           images: |
             burningc4/ubi-code
           tags: |
-            type=raw,value={{tag}}
+            type=raw,value={{sha}}
             type=raw,latest
             type=raw,value={{date 'YYYYWW'}}
 
