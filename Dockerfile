@@ -9,7 +9,9 @@ ENV LC_CTYPE C.UTF-8
 
 # Setup scripts for CODE
 ADD /scripts/install-code-el8.sh /
-ADD /repo/CODE-el8.repo /etc/yum.repos.d/
+ADD /repo/CODE-el8.repo /repo/epel-modular.repo /repo/epel.repo /etc/yum.repos.d/
+ADD /repo/RPM-GPG-KEY-EPEL-8 /etc/pki/rpm-gpg/
+
 RUN bash install-code-el8.sh
 RUN rm -rf /install-code-el8.sh
 
