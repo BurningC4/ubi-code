@@ -23,14 +23,13 @@ microdnf install -y openssh
 microdnf install -y curl wget
 
 # Add Collabora repos
-wget https://collaboraoffice.com/${repo:-repos}/CollaboraOnline/CODE-centos8/repodata/repomd.xml.key && rpm --import repomd.xml.key && rm -f repomd.xml.key
+wget https://collaboraoffice.com/repos/CollaboraOnline/CODE-centos8/repodata/repomd.xml.key && rpm --import repomd.xml.key && rm -f repomd.xml.key
 
 # Install the Collabora packages
 
 microdnf install -y coolwsd collaboraoffice-dict* collaboraofficebasis-ar collaboraofficebasis-as collaboraofficebasis-ast collaboraofficebasis-bg collaboraofficebasis-bn-IN collaboraofficebasis-br collaboraofficebasis-ca collaboraofficebasis-calc collaboraofficebasis-ca-valencia collaboraofficebasis-core collaboraofficebasis-cs collaboraofficebasis-cy collaboraofficebasis-da collaboraofficebasis-de collaboraofficebasis-draw collaboraofficebasis-el collaboraofficebasis-en-GB collaboraofficebasis-en-US collaboraofficebasis-es collaboraofficebasis-et collaboraofficebasis-eu collaboraofficebasis-extension-pdf-import collaboraofficebasis-fi collaboraofficebasis-fr collaboraofficebasis-ga collaboraofficebasis-gd collaboraofficebasis-gl collaboraofficebasis-graphicfilter collaboraofficebasis-gu collaboraofficebasis-he collaboraofficebasis-hi collaboraofficebasis-hr collaboraofficebasis-hu collaboraofficebasis-id collaboraofficebasis-images collaboraofficebasis-impress collaboraofficebasis-is collaboraofficebasis-it collaboraofficebasis-ja collaboraofficebasis-km collaboraofficebasis-kn collaboraofficebasis-ko collaboraofficebasis-lt collaboraofficebasis-lv collaboraofficebasis-ml collaboraofficebasis-mr collaboraofficebasis-nb collaboraofficebasis-nl collaboraofficebasis-nn collaboraofficebasis-oc collaboraofficebasis-ooofonts collaboraofficebasis-ooolinguistic collaboraofficebasis-or collaboraofficebasis-pa-IN collaboraofficebasis-pl collaboraofficebasis-pt collaboraofficebasis-pt-BR collaboraofficebasis-ro collaboraofficebasis-ru collaboraofficebasis-sk collaboraofficebasis-sl collaboraofficebasis-sr collaboraofficebasis-sr-Latn collaboraofficebasis-sv collaboraofficebasis-ta collaboraofficebasis-te collaboraofficebasis-tr collaboraofficebasis-uk collaboraofficebasis-vi collaboraofficebasis-writer collaboraofficebasis-zh-CN collaboraofficebasis-zh-TW CODE-brand
 
 # Install inotifywait and killall to automatic restart coolwsd, if coolwsd.xml changes
-microdnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 microdnf install -y inotify-tools psmisc perl
 
 # Cleanup
